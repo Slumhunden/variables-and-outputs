@@ -27,13 +27,15 @@ function decrementNumber() {
 }
 
 function displayNumber() {
-    document.querySelector("#number").textContent = number;
-    if (number < 10){
-        message = "Hit that one more time";
-    } else {
-        message = "Don't hit the button";
-    }
-    document.querySelector("#message").textContent = message;
+  document.querySelector("#number").textContent = number;
+  if (number < 10) {
+    message = "Hit that one more time";
+  } else if (number == 10) {
+    message = "STOP HITTING THAT BUTTON";
+  } else {
+    message = "Don't hit the button";
+  }
+  document.querySelector("#message").textContent = message;
 }
 let num = 5;
 console.log(num);
